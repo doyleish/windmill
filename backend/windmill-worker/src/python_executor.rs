@@ -173,7 +173,7 @@ pub async fn pip_compile(
         args.extend(["--cert", cert_path]);
     }
     if pip_args.len() > 0 {
-        args.extend(["--pip-args", pip_args.join(" ")]);
+        args.extend(["--pip-args", &pip_args.join(" ")]);
     }
     tracing::debug!("pip-compile args: {:?}", args);
 
